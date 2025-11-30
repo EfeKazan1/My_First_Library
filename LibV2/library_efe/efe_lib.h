@@ -58,13 +58,6 @@ public:
 
 };
 
-
-typedef struct{
-    unsigned long SimdikiZaman=0;
-    unsigned long OncekiZaman=0;
-}Time;
-
-
 class Password{
 private:
     int digit;
