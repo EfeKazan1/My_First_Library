@@ -91,7 +91,7 @@ public:
     void setHead(Password *h) { head=h;}
     void setTail(Password *t) { tail=t;}
 
-    void sifre_ata(Pins *p, Servo *motor , Safe_State &state ,Servo_State servo_state,LiquidCrystal_I2C *lcd);
+    void sifre_ata(Pins *p, Servo *motor , Safe_State &state ,Safe_State sonraki_state,Servo_State servo_state,LiquidCrystal_I2C *lcd);
 
     int sifre_kontrol(Password &other);
 };

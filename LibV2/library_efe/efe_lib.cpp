@@ -14,7 +14,7 @@ void Pins::pin_ata(Servo *motor){
         motor->attach(servo_pin);
 }
 
-void Password::sifre_ata(Pins *p, Servo *motor , Safe_State &state ,Servo_State servo_state,LiquidCrystal_I2C *lcd){
+void Password::sifre_ata(Pins *p, Servo *motor , Safe_State &state ,Safe_State sonraki_state,Servo_State servo_state,LiquidCrystal_I2C *lcd){
         if(digitalRead(p->getBtn_Artr())==LOW){
 
             kontrol++;
@@ -64,10 +64,11 @@ void Password::sifre_ata(Pins *p, Servo *motor , Safe_State &state ,Servo_State 
 
                 motor->write(servo_state);
 
-                state=BEKLEME;
+                // state=BEKLEME;
 
                 hane=0;
 
+                state=sonraki_state;
             }
         }
 
